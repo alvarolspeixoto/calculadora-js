@@ -5,10 +5,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px black;
 }
 
 main {
-    background: linear-gradient(180deg, rgba(117,113,177,1) 0%, rgba(55,0,51,1) 100%);
+    color: white;
+    background: linear-gradient(180deg, rgb(51, 0, 66) 0%, rgb(27, 0, 24) 100%);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -16,6 +23,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 input[type="button"] {
@@ -23,7 +31,6 @@ input[type="button"] {
 }
 
 main .calculator input[type="button"] {
-    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 30px;
 }
@@ -47,7 +54,29 @@ main .calculator .clear-button input[type="button"] {
     width: 100%;
     background-color: #333B22;
     border: 3px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 10px;
+    font-size: 30px;
 }
+
+
+.visor #res {
+    font-size: 20px;
+    text-align: end;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
 
 .calculator {
     gap: 10px;
@@ -99,6 +128,10 @@ main .calculator .clear-button input[type="button"] {
         height: 110px;
         font-size: 50px;
         background: #225D5F;
+}
+
+.buttons .left-container #off-button {
+    width: 60%;
 }
 
 .buttons .left-container .off-button {

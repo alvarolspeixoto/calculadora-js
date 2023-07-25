@@ -8,39 +8,41 @@
 </head>
 <body>
     <main>
+        <h1>Calculadora Virtual</h1>
         <div class="calculator">
             <div class="visor">
-
+                <input class="invisible" type="text" id="res" placeholder="0" disabled="disabled">
             </div>
             <div class="clear-button">
-                <input type="button" value="ON/CE">
+                <input onclick="calculate('action', 'c')" type="button" value="ON/CE">
             </div>
             <div class="buttons">
                 <div class="left-container">
-                    <input class="off-button" type="button" value="OFF">
-                    <input type="button" value="&#x0221A;">
-                    <input type="button" value="%">
-                    <input type="button" value="7">
-                    <input type="button" value="8">
-                    <input type="button" value="9">
-                    <input type="button" value="4">
-                    <input type="button" value="5">
-                    <input type="button" value="6">
-                    <input type="button" value="1">
-                    <input type="button" value="2">
-                    <input type="button" value="3">
-                    <input type="button" value="0">
-                    <input type="button" value=".">
-                    <input type="button" value="=">
+                    <input id="off-button" onclick="calculate('action', 'off')" class="off-button" type="button" value="OFF">
+                    <!-- <input onclick="calculate('action', '&#x0221A;')" type="button" value="&#x0221A;"> -->
+                    <input onclick="calculate('action', '%')" type="button" value="%">
+                    <input onclick="calculate('value', 7)" type="button" value="7">
+                    <input onclick="calculate('value', 8)" type="button" value="8">
+                    <input onclick="calculate('value', 9)" type="button" value="9">
+                    <input onclick="calculate('value', 4)" type="button" value="4">
+                    <input onclick="calculate('value', 5)" type="button" value="5">
+                    <input onclick="calculate('value', 6)" type="button" value="6">
+                    <input onclick="calculate('value', 1)" type="button" value="1">
+                    <input onclick="calculate('value', 2)" type="button" value="2">
+                    <input onclick="calculate('value', 3)" type="button" value="3">
+                    <input onclick="calculate('value', 0)" type="button" value="0">
+                    <input onclick="calculate('action', '.')" type="button" value=".">
+                    <input onclick="calculate('action', '=')" type="button" value="=">
                 </div>
                 <div class="right-container">
-                    <input type="button" value="&divide;">
-                    <input type="button" value="X">
-                    <input type="button" value="&#8722;">
-                    <input class="plus-button" type="button" value="+">
+                    <input onclick="calculate('action', '/')" type="button" value="&divide;">
+                    <input onclick="calculate('action', 'x')" type="button" value="X">
+                    <input onclick="calculate('action', '-')" type="button" value="&#8722;">
+                    <input onclick="calculate('action', '+')" class="plus-button" type="button" value="+">
                 </div>
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
